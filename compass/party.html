@@ -1,0 +1,270 @@
+<!DOCTYPE HTML> <html>
+<head>
+<meta charset="UTF-8">
+<meta name="creator" lang="en" content="Emile" />
+<meta name="subject" lang="en" content="Media 150" />
+<meta name="description" lang="en" content="Emile Jean Baptiste, Media student" />
+<meta name="keywords" content="media, photoshop, illustrator" />
+<title>The Compass</title>
+<link href='https://fonts.googleapis.com/css?family=Germania One' rel='stylesheet'>
+<style>
+
+a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }
+
+#flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #7f7f7f;
+  max-width: 524px;
+  z-index: 10;
+  left: 5%;
+  top: 5%;
+  position: relative;
+  min-height: 35%;
+  justify-content: center;
+}
+
+#flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+}
+
+#flex-container > img {
+  background-color: #2f2f2f;
+  width: 110px;
+  height: 110px;
+  margin: 5px;
+  border: 2px solid black;
+  cursor:pointer;
+}
+
+a.nav-node:hover {color: #f0ad00;}
+
+a.nav-node:active {color: #b50d2c;}
+
+.flip-card {
+  background-color: transparent;
+  width: 524px;
+  height: 251px;
+  perspective: 1000px;
+  position: relative;
+  left:5%;
+  top:calc(9px + (.85*7.5vh));
+  display:none;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:active .flip-card-inner {
+  /*transform: rotateY(180deg);*/
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: pink;
+  color: black;
+  cursor:pointer;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.Info {
+  height:100%;
+  width: 334px;
+  font-size: 13px;
+  left:190px;
+  position:absolute;
+  overflow:auto;
+  font-family: 'Germania One';
+  text-align:left;
+  display:none;
+}
+/* width */
+.Info::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.Info::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.Info::-webkit-scrollbar-thumb {
+  background: #transparent;
+}
+
+#Haru-Info::-webkit-scrollbar-thumb:hover {
+  background: #ffd700;
+}
+
+#Acalan-Info::-webkit-scrollbar-thumb:hover {
+  background: #00ff00;
+}
+
+#Baldy-Info::-webkit-scrollbar-thumb:hover {
+  background: #BFBA6B;
+}
+
+#One-Info::-webkit-scrollbar-thumb:hover {
+  background: #D9D7D0;
+}
+
+#Piblo-Info::-webkit-scrollbar-thumb:hover {
+  background: #260101;
+}
+
+#Bera-Info::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+#Veni-Info::-webkit-scrollbar-thumb:hover {
+  background: #BE60BF;
+}
+
+
+</style>
+</head>
+<body style="background-color:#2f2f2f;">
+
+  <div style="width:100%; height: 15%; position: absolute; background-color:#000000; top: 0%; right:0%; display: inline-block; opacity:1; overflow:hidden; background: url(images/map_texture2.jpg); background-repeat: no-repeat; background-size: cover;">
+  <div style="width:100%; height: 66.6667%; position: absolute; top: 0%; right:0%; display: inline-block; opacity:1; overflow:hidden;">
+    <img src="images/CompassTitle1.png" style="height: 100%; position: relative; top: 0%; display: block; opacity:1; margin-left:auto; margin-right:auto;">
+  </div>
+  <div style="width:100%; height: 33.3333%; position: absolute; top: 66.6667%; right:0%; display: flex; opacity:1; justify-content: space-around; font-size: 2vw; font-family: 'Germania One'; text-decoration: underline;">
+    <div style="height: 5vh; line-height:5vh;">
+      <a href="index.html"  class="nav-node">Home</a>
+    </div>
+    <div style="height: 5vh; line-height:5vh;">
+      <a href="party.html" class="nav-node">Party</a>
+    </div>
+    <div style="height: 5vh; line-height:5vh;" class="nav-node">
+      NPC
+    </div>
+    <div style="height: 5vh; line-height:5vh;" class="nav-node">
+      Organizations
+    </div>
+    <div style="height: 5vh; line-height:5vh;" class="nav-node">
+      Places
+    </div>
+    <div style="height: 5vh; line-height:5vh;" class="nav-node">
+      Lore
+    </div>
+    <div style="height: 5vh; line-height:5vh;" class="nav-node">
+      Resources
+    </div>
+    <div style="height: 5vh; line-height:5vh;" class="nav-node">
+      Media
+    </div>
+  </div>
+</div>
+
+  <div style="width:50%; height: 85%; position:absolute; top: 15%; left:0%; overflow: auto;" id="left">
+
+  <div id="flex-container">
+  <img src="images/Acalan_profile.png" id="Acalan">
+  <img src="images/Haru_profile.png" id="Haru">
+  <img src="images/Baldy_profile.png" id="Baldy">
+  <img src="images/Veni_profile.png" id="Veni">
+  <img src="images/One_profile.png" id="One">
+  <img src="images/Piblo_profile.png" id="Piblo">
+  <img src="images/Bera_profile.png" id="Bera">
+  <img src="" id="N/A" style="display:none">
+</div>
+
+
+<div class="flip-card" id="card">
+  <div class="flip-card-inner" id="card-inner">
+    <div class="flip-card-front" id="card-front">
+      <canvas id="myCanvas1" width="524" height="251">
+      Your browser does not support the canvas element.
+      </canvas>
+    </div>
+    <div class="flip-card-back" id="card-back">
+      <div style="left:0%; position: absolute; width:190px; height:15%; font-family: 'Germania One'; font-size: 25px; line-height:37.65px; text-decoration: underline; color: #ffd700;" id="Name">
+    </div>
+    <div style="height:85%; left:0%; top:15%; width:190px; position:absolute;">
+    <img src="" style="height:100%; top:0%; position:relative; margin:auto; cursor:pointer;" id="card-icon">
+  </div>
+  <div id="Haru-Info" class="Info" style="color:#ffffff">
+    <p style="margin: 5px;">
+    Arashitora Haru is a Dragonborn ranger who is blue-blooded in both senses of the phrase, descended from the main branch of a clan that rose to something of a nobility status due to their feats in the Great Demon Wars. The Arashitora clan have since had a long-standing tradition of having the Dragonborn born into the family go out to perform what they simply call a “Great Deed.” This Deed consists of whatever the individual interprets it as—whether this means it is one feat (or many feats) of physical prowess, or of great courage, or of kindness and charity. Haru left her home at the age of 14 to seek out her own Great Deed, leaving her hometown and family behind.
+	Haru has since spent over a decade travelling across continents, taking in the various sights and seeking out adventure. She has high standards for what she wants her Great Deed to be, but she’s in no rush to get there, instead feeling that it’ll come naturally-- for now, she’s just been going wherever the wind takes her. Her one constant very dear and very, very good boy companion at the moment is her hunting dog, a Tibetan Mastiff named Kiba. Haru’s pretty aloof and tries to avoid getting too close to people she meets on her travels (key word ‘tries), but is still friendly and amiable enough, and while she likes doing her own thing, she’ll often wind up helping out folks who need it.
+</p>
+</div>
+<div id="Veni-Info" class="Info" style="color:#F2E0D5">
+  <p style="margin: 5px;">
+  Send me a paragraph summarazing your character or describing what your character is about for INSPIRATION. Also if you don't like your color scheme, send me three colors you think represent your character.
+</p>
+</div>
+<div id="Acalan-Info" class="Info" style="color:#ffff00">
+  <p style="margin: 5px;">
+  Send me a paragraph summarazing your character or describing what your character is about for INSPIRATION.
+</p>
+</div>
+<div id="Baldy-Info" class="Info" style="color:#11211C">
+  <p style="margin: 5px;">
+  Send me a paragraph summarazing your character or describing what your character is about for INSPIRATION. Also if you don't like your color scheme, send me three colors you think represent your character.
+</p>
+</div>
+<div id="One-Info" class="Info" style="color:#A68851">
+  <p style="margin: 5px;">
+  Send me a paragraph summarazing your character or describing what your character is about for INSPIRATION. Also if you don't like your color scheme, send me three colors you think represent your character.
+</p>
+</div>
+<div id="Piblo-Info" class="Info" style="color:#592828">
+  <p style="margin: 5px;">
+  Send me a paragraph summarazing your character or describing what your character is about for INSPIRATION. Also if you don't like your color scheme, send me three colors you think represent your character.
+</p>
+</div>
+<div id="Bera-Info" class="Info" style="color:#0000ff">
+  <p style="margin: 5px;">
+  Send me a paragraph summarazing your character or describing what your character is about for INSPIRATION. Also if you don't like your color scheme, send me three colors you think represent your character.
+</p>
+</div>
+<div style="display:block;" id="N/A-Info" class="Info">
+  <p style="margin: 5px;">
+  This Should Not Be Visibile
+</p>
+</div>
+    </div>
+  </div>
+</div>
+
+
+  <canvas id="hiddenCanvas" width="1000" height="1000"
+  style="border:1px solid #d3d3d3; z-index: 4; display: none;
+  position:absolute;
+  left:15%;
+  bottom:10%;">
+  Your browser does not support the canvas element.
+  </canvas>
+</div>
+
+<div style="height: 85%; position: absolute; background-color:#2f2f2f; top: 15%; right:0%; display: inline-block; opacity:1; overflow: auto;" id="right">
+  <img src="" style="height:100%; z-index:0; margin:auto; display:block; opacity:1;" id="character">
+</div>
+
+</body>
+<script src="party.js"></script>

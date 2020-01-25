@@ -1,5 +1,5 @@
-//var viewport_height = document.documentElement.clientHeight;
-//var viewport_width = document.documentElement.clientWidth;
+//TO-DO
+//Add Navbar
 
 var viewport_height = window.innerHeight;
 var viewport_width = window.innerWidth;
@@ -25,7 +25,7 @@ var imgs = {
   terrain: [],
   features:[]
 };
-var day = 16; //Hardcoded
+var day; //Hardcoded
 var text_switch = true;
 var mode_switch = "select";
 var hover_text = true;
@@ -69,7 +69,7 @@ function loadJSON(callback) {
 
     var xobj = new XMLHttpRequest();
         xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'map2.json', true); // Replace 'my_data' with the path to your file
+    xobj.open('GET', 'map.json', true); // Replace 'my_data' with the path to your file
     xobj.onreadystatechange = function () {
           if (xobj.readyState == 4 && xobj.status == "200") {
             // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
@@ -274,7 +274,7 @@ document.getElementById('hexSearch').onsubmit = function() {
 
 function canvasResize() {
   viewport_height = window.innerHeight;
-  viewport_width = window.innerWidth;;
+  viewport_width = window.innerWidth;
   layer1.setAttribute('width', (Math.round(viewport_width*.7)).toString());
   layer1.setAttribute('height', (Math.round(viewport_height*.75)).toString());
   layer2.setAttribute('width', (Math.round(viewport_width*.7)).toString());
@@ -861,7 +861,7 @@ function getInfo(x,y) {
   for (var i = 0; i < visit.length; i++) {
     if (visit[i] <= day) {
     if (i > 0)
-      return_string+="<br>";
+      return_string+="<br><br>";
     return_string+="Day ";
     return_string+=visit[i];
     return_string+=": ";
@@ -1321,6 +1321,7 @@ function init() {
      world_map.draw();
      day = map_data.max_days;
      anim.ready = true;
+     canvasResize();
   });
 }
 

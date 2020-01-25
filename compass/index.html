@@ -6,10 +6,75 @@
 <meta name="description" lang="en" content="Emile Jean Baptiste, Media student" />
 <meta name="keywords" content="media, photoshop, illustrator" />
 <title>The Compass</title>
+<link href='https://fonts.googleapis.com/css?family=Germania One' rel='stylesheet'>
+<style>
+
+a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }
+
+ a.nav-node:hover {color: #f0ad00;}
+
+ a.nav-node:active {color: #b50d2c;}
+
+.Info::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.Info::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+.Info::-webkit-scrollbar-thumb {
+  background: #transparent;
+}
+
+.Info::-webkit-scrollbar-thumb:hover {
+  background: #000000;
+}
+</style>
 </head>
-<body style="background-color:#2f2f2f">
+<body style="background-color:#2f2f2f; font-family: 'Germania One';">
+
+  <div style="width:100%; height: 15%; position: absolute; background-color:#000000; top: 0%; right:0%; display: inline-block; opacity:1; overflow:hidden; background: url(images/map_texture2.jpg); background-repeat: no-repeat; background-size: cover;">
+  <div style="width:100%; height: 66.6667%; position: absolute; top: 0%; right:0%; display: inline-block; opacity:1; overflow:hidden;">
+    <img src="images/CompassTitle1.png" style="height: 100%; position: relative; top: 0%; display: block; opacity:1; margin-left:auto; margin-right:auto;">
+  </div>
+  <div style="width:100%; height: 33.3333%; position: absolute; top: 66.6667%; right:0%; display: flex; opacity:1; justify-content: space-around; font-size: 2vw; text-decoration: underline;">
+    <div style="height: 5vh; line-height:5vh;">
+      <a href="index.html"  class="nav-node">Home</a>
+    </div>
+    <div style="height: 5vh; line-height:5vh;">
+      <a href="party.html" class="nav-node">Party</a>
+    </div>
+    <div style="height: 5vh; line-height:5vh;" class="nav-node">
+      NPC
+    </div>
+    <div style="height: 5vh; line-height:5vh;" class="nav-node">
+      Organizations
+    </div>
+    <div style="height: 5vh; line-height:5vh;" class="nav-node">
+      Places
+    </div>
+    <div style="height: 5vh; line-height:5vh;" class="nav-node">
+      Lore
+    </div>
+    <div style="height: 5vh; line-height:5vh;" class="nav-node">
+      Resources
+    </div>
+    <div style="height: 5vh; line-height:5vh;" class="nav-node">
+      Media
+    </div>
+  </div>
+</div>
+
+<div style="width:100%; height: 100%; position: absolute; top: 15%; left:0%;">
+
   <div style="height:10%; width: 70%; background-color:#7f7f7f; z-index: 4; position: absolute; left:15%; top:0px; display: inline-block; text-align: center; font-size: 2.5vh;">
-    <button id="rewind" onclick="rewind()" style="display: inline-block; font-size: 2.5vh; padding:0px; background-color:transparent; border:0;">⮜</button><p id="time" style="display: inline-block; margin: .5em">Day 16</p><button id="forward" onclick="forward()" style="display: inline-block; font-size: 2.5vh; padding:0px; background-color: transparent; border:0;">⮞</button>
+    <button id="rewind" onclick="rewind()" style="display: inline-block; font-size: 2.5vh; padding:0px; background-color:transparent; border:0;">⮜</button><p id="time" style="display: inline-block; margin: .5em">Day 18</p><button id="forward" onclick="forward()" style="display: inline-block; font-size: 2.5vh; padding:0px; background-color: transparent; border:0;">⮞</button>
     <p id="disp" style="margin: .5em"></p>
   </div>
 
@@ -60,7 +125,7 @@ Y:<input id="y_input" maxlength="3" size="1" type="number" min="0" max="299"/><b
     <div style="height: 5%; width: 100%; position: relative; display: block"></div>
     Path Animation:<input type="checkbox" id="anim_switch"  onclick="animSwitch()" checked>
   </div>
-  <div style="height:12.5%; width: 70%; background-color:#7f7f7f; z-index: 4; position: absolute; left:15%; top:85%; font-size: 2.25vh; overflow-y:auto;">
+  <div style="height:12.5%; width: 70%; background-color:#7f7f7f; z-index: 4; position: absolute; left:15%; top:85%; font-size: 2.25vh; overflow-y:auto;" class="Info">
     <p id="feat" style="margin: .5em"></p>
     <p id="hist" style="margin: .5em"></p>
   </div>
@@ -94,8 +159,8 @@ left:15%;
 top:10%;">
 Your browser does not support the canvas element.
 </canvas>
+</div>
 
-
-<script src="homemap.js"></script>
 </body>
+<script src="homemap.js"></script>
 </html>
