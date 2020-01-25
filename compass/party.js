@@ -308,13 +308,13 @@ function start() {
 document.getElementById('Acalan').addEventListener('click', function(evt) { //Jungle
   if (character == "N/A")
     document.getElementById("card").style.display="block";
-  document.getElementById("character").src="images/Acalan.png";
+  document.getElementById("character").src="images/acalan.png";
   document.getElementById(character).style.borderColor="black"; //#f0ad00-Hover #b50d2c-Selected
   document.getElementById(character + "-Info").style.display = "none";
   character = "Acalan";
   document.getElementById(character).style.borderColor="#b50d2c";
 
-  document.getElementById("card-icon").src="images/Acalan.png";
+  document.getElementById("card-icon").src="images/acalan.png";
 
   document.getElementById("Name").innerHTML="ACALAN";
   document.getElementById("Name").style.color = "#00ff00";
@@ -338,13 +338,13 @@ document.getElementById('Acalan').addEventListener('mouseleave', function(evt) {
 document.getElementById('Haru').addEventListener('click', function(evt) { //Forest
   if (character == "N/A")
     document.getElementById("card").style.display="block";
-  document.getElementById("character").src="images/Haru.png";
+  document.getElementById("character").src="images/haru.png";
   document.getElementById(character).style.borderColor="black";
   document.getElementById(character + "-Info").style.display = "none";
   character = "Haru";
   document.getElementById(character).style.borderColor="#b50d2c";
 
-  document.getElementById("card-icon").src="images/Haru.png";
+  document.getElementById("card-icon").src="images/haru.png";
 
   document.getElementById("Name").innerHTML="ARASHITORA HARU";
   document.getElementById("Name").style.color = "#ffd700";
@@ -369,13 +369,13 @@ document.getElementById('Haru').addEventListener('mouseleave', function(evt) {
 document.getElementById('Baldy').addEventListener('click', function(evt) { //Library/School or Air
   if (character == "N/A")
     document.getElementById("card").style.display="block";
-  document.getElementById("character").src="images/Baldy.png";
+  document.getElementById("character").src="images/baldy.png";
   document.getElementById(character).style.borderColor="black";
   document.getElementById(character + "-Info").style.display = "none";
   character = "Baldy";
   document.getElementById(character).style.borderColor="#b50d2c";
 
-  document.getElementById("card-icon").src="images/Baldy.png";
+  document.getElementById("card-icon").src="images/baldy.png";
 
   document.getElementById("Name").innerHTML="ARCHIBALD";
   document.getElementById("Name").style.color = "#734636";
@@ -399,13 +399,13 @@ document.getElementById('Baldy').addEventListener('mouseleave', function(evt) {
 document.getElementById('Veni').addEventListener('click', function(evt) { //Castle/Manor
   if (character == "N/A")
     document.getElementById("card").style.display="block";
-  document.getElementById("character").src="images/Veni.png";
+  document.getElementById("character").src="images/veni.png";
   document.getElementById(character).style.borderColor="black";
   document.getElementById(character + "-Info").style.display = "none";
   character = "Veni";
   document.getElementById(character).style.borderColor="#b50d2c";
 
-  document.getElementById("card-icon").src="images/Veni.png";
+  document.getElementById("card-icon").src="images/veni.png";
 
   document.getElementById("Name").innerHTML="VENI YAN";
   document.getElementById("Name").style.color = "#D9B036";
@@ -429,13 +429,13 @@ document.getElementById('Veni').addEventListener('mouseleave', function(evt) {
 document.getElementById('One').addEventListener('click', function(evt) { //Cave/Underground
   if (character == "N/A")
     document.getElementById("card").style.display="block";
-  document.getElementById("character").src="images/One.png";
+  document.getElementById("character").src="images/one.png";
   document.getElementById(character).style.borderColor="black";
   document.getElementById(character + "-Info").style.display = "none";
   character = "One";
   document.getElementById(character).style.borderColor="#b50d2c";
 
-  document.getElementById("card-icon").src="images/One.png";
+  document.getElementById("card-icon").src="images/one.png";
 
   document.getElementById("Name").innerHTML="ONE";
   document.getElementById("Name").style.color = "#D9D7D0";
@@ -459,13 +459,13 @@ document.getElementById('One').addEventListener('mouseleave', function(evt) {
 document.getElementById('Piblo').addEventListener('click', function(evt) { //Hills/Mountains
   if (character == "N/A")
     document.getElementById("card").style.display="block";
-  document.getElementById("character").src="images/Piblo.png";
+  document.getElementById("character").src="images/piblo.png";
   document.getElementById(character).style.borderColor="black";
   document.getElementById(character + "-Info").style.display = "none";
   character = "Piblo";
   document.getElementById(character).style.borderColor="#b50d2c";
 
-  document.getElementById("card-icon").src="images/Piblo.png";
+  document.getElementById("card-icon").src="images/piblo.png";
 
   document.getElementById("Name").innerHTML="PIBLO SMAGGINS";
   document.getElementById("Name").style.color = "#260101";
@@ -489,13 +489,13 @@ document.getElementById('Piblo').addEventListener('mouseleave', function(evt) {
 document.getElementById('Bera').addEventListener('click', function(evt) { //American Flag
   if (character == "N/A")
     document.getElementById("card").style.display="block";
-  document.getElementById("character").src="images/Bera.png";
+  document.getElementById("character").src="images/bera.png";
   document.getElementById(character).style.borderColor="black";
   document.getElementById(character + "-Info").style.display = "none";
   character = "Bera";
   document.getElementById(character).style.borderColor="#b50d2c";
 
-  document.getElementById("card-icon").src="images/Bera.png";
+  document.getElementById("card-icon").src="images/bera.png";
 
   document.getElementById("Name").innerHTML="BERA";
   document.getElementById("Name").style.color = "#ffffff";
