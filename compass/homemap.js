@@ -258,6 +258,8 @@ function loadJSON(callback) {
  //End of MapMove Event Listener Block
 
 document.getElementById('hexSearch').onsubmit = function() {
+  console.log(x_input);
+  console.log(y_input);
   var x_input = parseInt(document.getElementById('x_input').value);
   var y_input = parseInt(document.getElementById('y_input').value);
   if ((x_input == "NaN" || x_input < 0 || x_input > 299) || (y_input == "NaN" || y_input < 0 || y_input > 299))
@@ -1320,6 +1322,7 @@ function init() {
      world_map.map_change = true;
      world_map.draw();
      day = map_data.max_days;
+     document.getElementById("time").innerHTML = "Day " + day;
      anim.ready = true;
      canvasResize();
   });
@@ -1481,8 +1484,8 @@ function drawPath() {
     return;
   ctx2.beginPath();
   ctx2.strokeStyle = "white";
-  for (var i = 0; i < day; i++) {
-    for (var j = 0; j < map_data.path[i].length; j++) {
+  for (var i = 0; i < day; i++) { //i is the day
+    for (var j = 0; j < map_data.path[i].length; j++) {//j is the steps
       var canvas_hex = mapToCanvasHex(map_data.path[i][j].x,map_data.path[i][j].y);
       var hex_center = {x:0, y:0};
       hex_center.x = canvas_hex.x + (Math.cos(1/3*Math.PI)*world_map.length);
@@ -1495,7 +1498,8 @@ function drawPath() {
         ctx2.stroke();
       }
       if (j == 0) {
-        drawArrow(hex_center.x,hex_center.y,pathDirection(map_data.path[i][j].x,map_data.path[i][j].y,map_data.path[i][j+1].x,map_data.path[i][j+1].y));
+        if (map_data.path[i].length > 1)
+          drawArrow(hex_center.x,hex_center.y,pathDirection(map_data.path[i][j].x,map_data.path[i][j].y,map_data.path[i][j+1].x,map_data.path[i][j+1].y));
         ctx2.moveTo(hex_center.x,hex_center.y);
       }
     }
