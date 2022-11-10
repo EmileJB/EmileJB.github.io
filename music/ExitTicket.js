@@ -571,7 +571,7 @@ $('#error_box').append("<li>" +"Your bpm variable was removed or renamed, using 
 Tone.Transport.bpm.value = 120;
 }
 
-Tone.Transport.stop();
+//Tone.Transport.stop();
 Tone.Transport.start();
 });
 
